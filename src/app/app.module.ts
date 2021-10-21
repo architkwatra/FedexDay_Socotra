@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SubmissionsComponent } from './submissions/submissions.component';
 import { QuarterItemComponent } from './quarter-item/quarter-item.component';
+import { AddProjectModalComponent } from './add-project-modal/add-project-modal.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { QuarterItemComponent } from './quarter-item/quarter-item.component';
     HomeComponent,
     NavbarComponent,
     SubmissionsComponent,
-    QuarterItemComponent
+    QuarterItemComponent,
+    AddProjectModalComponent
   ],
   imports: [
     BrowserModule,
