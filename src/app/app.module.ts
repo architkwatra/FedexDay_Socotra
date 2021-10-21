@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SubmissionsComponent } from './submissions/submissions.component';
 import { QuarterItemComponent } from './quarter-item/quarter-item.component';
 import { AddProjectModalComponent } from './add-project-modal/add-project-modal.component';
+import { ProjectInfoComponent } from './project-info/project-info.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { AddProjectModalComponent } from './add-project-modal/add-project-modal.
     NavbarComponent,
     SubmissionsComponent,
     QuarterItemComponent,
-    AddProjectModalComponent
+    AddProjectModalComponent,
+    ProjectInfoComponent
   ],
   imports: [
     BrowserModule,
