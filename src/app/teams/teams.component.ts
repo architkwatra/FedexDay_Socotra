@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamsComponent implements OnInit {
 
+  info: any = {};
+  showModal = "none";
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  toggleModal(event: any) {
+    event.preventDefault();
+    if (this.showModal == "none")
+      this.showModal = "block";
+    else
+      this.showModal = "none";
+  }
 }

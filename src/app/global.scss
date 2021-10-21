@@ -2,3 +2,12 @@
   opacity: 1;
   display: block;
 }
+
+.button-fixed {
+  position: fixed;
+  top: 85%;
+  left: 88%;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+}

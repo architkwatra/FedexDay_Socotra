@@ -9,7 +9,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SubmissionsComponent } from './submissions/submissions.component';
 import { QuarterItemComponent } from './quarter-item/quarter-item.component';
 import { AddProjectModalComponent } from './add-project-modal/add-project-modal.component';
-import { ProjectInfoComponent } from './project-info/project-info.component';
 import { TeamsComponent } from './teams/teams.component';
 import { TimelineComponent } from './timeline/timeline.component';
 
@@ -22,7 +21,6 @@ import { TimelineComponent } from './timeline/timeline.component';
     SubmissionsComponent,
     QuarterItemComponent,
     AddProjectModalComponent,
-    ProjectInfoComponent,
     TeamsComponent,
     TimelineComponent
   ],
