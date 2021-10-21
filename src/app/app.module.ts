@@ -10,6 +10,7 @@ import { SubmissionsComponent } from './submissions/submissions.component';
 import { QuarterItemComponent } from './quarter-item/quarter-item.component';
 import { AddProjectModalComponent } from './add-project-modal/add-project-modal.component';
 import { ProjectInfoComponent } from './project-info/project-info.component';
+import { TeamsComponent } from './teams/teams.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ProjectInfoComponent } from './project-info/project-info.component';
     SubmissionsComponent,
     QuarterItemComponent,
     AddProjectModalComponent,
-    ProjectInfoComponent
+    ProjectInfoComponent,
+    TeamsComponent
   ],
   imports: [
     BrowserModule,
