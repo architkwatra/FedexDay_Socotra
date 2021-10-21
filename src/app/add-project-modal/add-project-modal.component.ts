@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-project-modal',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddProjectModalComponent implements OnInit {
 
-  constructor() { }
+  showModal = "none";
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+    this.showModal = "block";
   }
 
+  toggleModal() {
+    if (this.showModal == "none")
+      this.showModal = "block";
+    else
+      this.showModal = "none";
+    this.router.navigate(['/']);
+  }
+  saveInfo(){}
 }

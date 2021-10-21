@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class ProjectInfoComponent implements OnInit {
 
-  showModal = "none"
+  showModal = "none";
 
   constructor(private router:Router) {
     this.showModal = "block";

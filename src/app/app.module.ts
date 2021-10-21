@@ -11,6 +11,7 @@ import { QuarterItemComponent } from './quarter-item/quarter-item.component';
 import { AddProjectModalComponent } from './add-project-modal/add-project-modal.component';
 import { ProjectInfoComponent } from './project-info/project-info.component';
 import { TeamsComponent } from './teams/teams.component';
+import { TimelineComponent } from './timeline/timeline.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { TeamsComponent } from './teams/teams.component';
     QuarterItemComponent,
     AddProjectModalComponent,
     ProjectInfoComponent,
-    TeamsComponent
+    TeamsComponent,
+    TimelineComponent
   ],
   imports: [
     BrowserModule,
