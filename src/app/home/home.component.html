@@ -1,4 +1,4 @@
-<app-quarter-item [data]="data"></app-quarter-item>
+<app-quarter-item [data]="this.globalService.currQuarterProjectsData"></app-quarter-item>
 
 <!-- Modal -->
 <div [ngStyle]="{'display':showModal}" class="modal fade" id="addTeamInfo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

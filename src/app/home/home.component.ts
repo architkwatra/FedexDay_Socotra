@@ -10,14 +10,13 @@ import {GlobalService} from "../global.service";
 export class HomeComponent implements OnInit {
 
   showModal = "none";
-  // data: Array<any> = [];
   projectTitle = new FormControl('');
   projectDescription = new FormControl('');
   submitter = new FormControl('');
   alertMessage = "";
   showAlert = false;
 
-  constructor(private globalService: GlobalService) { }
+  constructor(public globalService: GlobalService) { }
 
   ngOnInit(): void {
   }
@@ -43,6 +42,7 @@ export class HomeComponent implements OnInit {
     temp.submitter = this.submitter.value;
     this.globalService.currQuarterProjectsData.push(temp);
     this.showModal = "none";
+    this.clearForm();
   }
 
   displayAlert(message: string) {
@@ -54,5 +54,12 @@ export class HomeComponent implements OnInit {
 
   openProjectInfoModal() {
     this.showModal = "block";
+  }
+
+  clearForm() {
+    this.projectTitle.setValue("");
+    this.submitter.setValue("");
+    this.projectTitle.setValue("");
+
   }
 }
