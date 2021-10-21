@@ -15,4 +15,8 @@ export class QuarterItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getId(prefix: string, i: number) {
+    return prefix + i.toString();
+  }
+
 }
