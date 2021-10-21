@@ -30,17 +30,22 @@ export class HomeComponent implements OnInit {
   }
 
   saveInfo() {
+    let check = false;
     this.globalService.currQuarterProjectsData.forEach((obj) => {
       if (obj.projectTitle == this.projectTitle.value) {
         this.displayAlert("Project title already exisits");
+        check = true;
+        return;
       }
     });
 
-    let temp = {projectTitle: "", projectDescription:"", submitter: ""};
-    temp.projectTitle = this.projectTitle.value;
-    temp.projectDescription = this.projectDescription.value;
-    temp.submitter = this.submitter.value;
-    this.globalService.currQuarterProjectsData.push(temp);
+    if (!check) {
+      let temp = {projectTitle: "", projectDescription:"", submitter: ""};
+      temp.projectTitle = this.projectTitle.value;
+      temp.projectDescription = this.projectDescription.value;
+      temp.submitter = this.submitter.value;
+      this.globalService.currQuarterProjectsData.push(temp);
+    }
     this.showModal = "none";
     this.clearForm();
   }
@@ -50,7 +55,12 @@ export class HomeComponent implements OnInit {
     this.showAlert = true;
   }
 
-  closeAlert() {}
+  toggleAlert() {
+    if (this.showAlert === false)
+      this.showAlert = true;
+    else
+      this.showAlert = false;
+  }
 
   openProjectInfoModal() {
     this.showModal = "block";
@@ -58,8 +68,7 @@ export class HomeComponent implements OnInit {
 
   clearForm() {
     this.projectTitle.setValue("");
+    this.projectDescription.setValue("");
     this.submitter.setValue("");
-    this.projectTitle.setValue("");
-
   }
 }

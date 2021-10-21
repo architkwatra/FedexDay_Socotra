@@ -17,7 +17,7 @@
                     <label for="exampleFormControlInput2" >Project Description</label>
                     <textarea type="text" id="exampleFormControlInput2" [formControl]="projectDescription"></textarea>
                 </div>
-                <div class="mb-3">
+                <div class="mb-3 container-fluid">
                     <label for="exampleFormControlTextarea1">Submitted By</label>
                     <input id="exampleFormControlTextarea1" placeholder="John Doe" [formControl]="submitter">
                 </div>
@@ -30,3 +30,9 @@
     </div>
 </div>
 <button (click)="openProjectInfoModal()" type="button" class="btn btn-primary button-fixed" data-bs-toggle="button" autocomplete="off">+</button>
+
+<div *ngIf="showAlert" class="alert alert-warning alert-dismissible show" role="alert">
+    <strong>OOPS!</strong> {{alertMessage}}
+    <button (click)="toggleAlert()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
