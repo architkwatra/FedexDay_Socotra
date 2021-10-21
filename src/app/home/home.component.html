@@ -1,28 +1,28 @@
-<app-quarter-item></app-quarter-item>
+<app-quarter-item [data]="data"></app-quarter-item>
 
 <!-- Modal -->
 <div [ngStyle]="{'display':showModal}" class="modal fade" id="addTeamInfo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
+    <div class="modal-dialog modal-dialog-centered container-fluid">
+        <div class="modal-content container-fluid container-fluid">
+            <div class="modal-header container-fluid container-fluid">
                 <h5 class="modal-title">Your Fed-Ex Day Project Idea</h5>
                 <button (click)="toggleModal($event)" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                <div class="mb-3">
-                    <label for="projectTitle" class="form-label">Project Title</label>
-                    <input type="text" class="form-control" id="projectTitle" placeholder="FedexDay Website">
+            <div class="modal-body container-fluid">
+                <div class="mb-3 container-fluid">
+                    <label for="projectTitle">Project Title</label>
+                    <input type="text" id="projectTitle" [formControl]="projectTitle" placeholder="FedexDay Website">
+                </div>
+                <div class="mb-3 container-fluid">
+                    <label for="exampleFormControlInput2" >Project Description</label>
+                    <textarea type="text" id="exampleFormControlInput2" [formControl]="projectDescription"></textarea>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput2" class="form-label">Project Description</label>
-                    <textarea type="email" class="form-control" id="exampleFormControlInput2"></textarea>
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Submitted By</label>
-                    <input class="form-control" id="exampleFormControlTextarea1" placeholder="John Doe">
+                    <label for="exampleFormControlTextarea1">Submitted By</label>
+                    <input id="exampleFormControlTextarea1" placeholder="John Doe" [formControl]="submitter">
                 </div>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer container-fluid">
                 <button (click)="toggleModal($event)" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button (click)="saveInfo()" type="button" class="btn btn-primary">Save changes</button>
             </div>

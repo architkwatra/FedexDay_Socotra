@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-quarter-item',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quarter-item.component.scss']
 })
 export class QuarterItemComponent implements OnInit {
+
+
+  @Input() data: any = {};
 
   constructor() { }
 
