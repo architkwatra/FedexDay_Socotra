@@ -11,6 +11,7 @@ import { QuarterItemComponent } from './quarter-item/quarter-item.component';
 import { AddProjectModalComponent } from './add-project-modal/add-project-modal.component';
 import { TeamsComponent } from './teams/teams.component';
 import { TimelineComponent } from './timeline/timeline.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { TimelineComponent } from './timeline/timeline.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AlertModule.forRoot()
+    AlertModule.forRoot(),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import {GlobalService} from "../global.service";
 
 @Component({
   selector: 'app-home',
@@ -9,11 +10,14 @@ import { FormControl } from '@angular/forms';
 export class HomeComponent implements OnInit {
 
   showModal = "none";
-  data: any = {};
-  favoriteColorControl = new FormControl('');
+  // data: Array<any> = [];
+  projectTitle = new FormControl('');
+  projectDescription = new FormControl('');
+  submitter = new FormControl('');
+  alertMessage = "";
+  showAlert = false;
 
-
-  constructor() { }
+  constructor(private globalService: GlobalService) { }
 
   ngOnInit(): void {
   }
@@ -26,7 +30,27 @@ export class HomeComponent implements OnInit {
       this.showModal = "none";
   }
 
-  saveInfo() {}
+  saveInfo() {
+    this.globalService.currQuarterProjectsData.forEach((obj) => {
+      if (obj.projectTitle == this.projectTitle.value) {
+        this.displayAlert("Project title already exisits");
+      }
+    });
+
+    let temp = {projectTitle: "", projectDescription:"", submitter: ""};
+    temp.projectTitle = this.projectTitle.value;
+    temp.projectDescription = this.projectDescription.value;
+    temp.submitter = this.submitter.value;
+    this.globalService.currQuarterProjectsData.push(temp);
+    this.showModal = "none";
+  }
+
+  displayAlert(message: string) {
+    this.alertMessage = message;
+    this.showAlert = true;
+  }
+
+  closeAlert() {}
 
   openProjectInfoModal() {
     this.showModal = "block";
