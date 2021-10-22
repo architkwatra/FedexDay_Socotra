@@ -1,0 +1,13 @@
+<div class="container-fluid main">
+    <div class="row">
+        <div class="col-md">
+            <div class="gallery">
+                <ng-container *ngFor = "let l of data; let i = index">
+                    <figure class="gallery__item gallery__item--{{i+1}}">
+                        <img src="assets/images/{{l}}" alt="Gallery image {{i+1}}" class="gallery__img">
+                    </figure>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>

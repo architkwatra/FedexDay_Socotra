@@ -16,6 +16,7 @@ import { AlertComponent } from './alert/alert.component';
 import { TeamsInfoComponent } from './teams-info/teams-info.component';
 import {SlickCarouselModule} from "ngx-slick-carousel";
 import { FooterComponent } from './footer/footer.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FooterComponent } from './footer/footer.component';
     TimelineComponent,
     AlertComponent,
     TeamsInfoComponent,
-    FooterComponent
+    FooterComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
