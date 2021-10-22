@@ -35,4 +35,9 @@
 </div>
 
 <button (click)="toggleModal()" type="button" class="btn btn-primary button-fixed" data-bs-toggle="button" autocomplete="off">+</button>
-<app-alert [alertMessage]="alertMessage"></app-alert>
+<!--<app-alert [alertMessage]="alertMessage"></app-alert>-->
+
+<div *ngIf="showAlert" class="alert alert-warning alert-dismissible show" role="alert">
+    <strong>OOPS!</strong> {{alertMessage}}
+    <button (click)="toggleAlert()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>

@@ -34,9 +34,9 @@ export class TeamsComponent implements OnInit {
 
   saveInfo(){
     let check = false;
-    this.globalService.currQuarterProjectsData.forEach((obj) => {
-      if (obj.projectTitle == this.teamName.value) {
-        this.displayAlert("Project title already exisits");
+    this.globalService.currQuarterTeamsData.forEach((obj) => {
+      if (obj.teamName == this.teamName.value) {
+        this.displayAlert(obj.teamName + " already exists");
         check = true;
         return;
       }
@@ -65,4 +65,12 @@ export class TeamsComponent implements OnInit {
     this.alertMessage = message;
     this.showAlert = true;
   }
+
+  toggleAlert() {
+    if (this.showAlert === false)
+      this.showAlert = true;
+    else
+      this.showAlert = false;
+  }
+
 }
