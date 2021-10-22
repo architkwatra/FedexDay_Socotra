@@ -11,6 +11,7 @@ import { QuarterItemComponent } from './quarter-item/quarter-item.component';
 import { TeamsComponent } from './teams/teams.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule} from "@angular/forms";
 import { AlertComponent } from './alert/alert.component';
 import { TeamsInfoComponent } from './teams-info/teams-info.component';
 
@@ -31,7 +32,8 @@ import { TeamsInfoComponent } from './teams-info/teams-info.component';
     BrowserModule,
     AppRoutingModule,
     AlertModule.forRoot(),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

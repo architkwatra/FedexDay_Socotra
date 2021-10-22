@@ -1,68 +1,43 @@
-<div style="margin: 10%; border: solid; padding: 10px">
-    <div class="mb-3">
-        <label for="submissionControlInput1" class="form-label">Name of Project</label>
-        <input type="email" class="form-control" id="submissionControlInput1" placeholder="name@example.com">
+<form #myform = "ngForm" (ngSubmit) = "onSubmit(myform)" >
+    <div class="form-group">
+        <label for="submissionField1">Name of Project</label>
+        <input ngModel name="submissionField1" type="text" class="form-control" id="submissionField1">
     </div>
-    <div class="mb-3">
-        <label for="submissionControlInput2" class="form-label">Who worked on it?</label>
-        <input type="email" class="form-control" id="submissionControlInput2" placeholder="name@example.com">
+    <div class="form-group">
+        <label for="submissionField2">Who worked on it?</label>
+        <input ngModel name="submissionField2" type="text" class="form-control" id="submissionField2">
     </div>
-    <div class="mb-3">
-        <label for="submissionControlTextarea1" class="form-label">Describe your project</label>
-        <textarea class="form-control" id="submissionControlTextarea1" rows="3"></textarea>
+    <div class="form-group">
+        <label for="submissionField3">Describe your project</label>
+        <textarea ngModel name="submissionField3" id="submissionField3" cols="30" rows="10" class="form-control"></textarea>
     </div>
-    <div class="mb-3">
-        <label class="form-label">Would like to demo this?</label>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-            <label class="form-check-label" for="flexRadioDefault1">
-                Yes
-            </label>
+    <div class="form-group">
+        <label for="submissionField4">Link?</label>
+        <input ngModel name="submissionField4" type="text" class="form-control" id="submissionField4">
+    </div>
+    <div class="form-group">
+        <label for="submissionField5">GitHub?</label>
+        <input ngModel name="submissionField5" type="text" class="form-control" id="submissionField5">
+    </div>
+    <div class="form-group">
+        <label for="submissionField6">Anything else?</label>
+        <input ngModel name="submissionField6" type="text" class="form-control" id="submissionField6">
+    </div>
+    <div class="form-group">
+        <label for="submissionField7">Would you like to demo this?</label>
+        <div>
+            <input ngModel id="yes" type="radio" value="yes" name="submissionField7" formControlName="submissionField7" checked>
+            <label for="yes">Yes</label>
         </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-            <label class="form-check-label" for="flexRadioDefault2">
-                No
-            </label>
+        <div>
+            <input ngModel id="no" type="radio" value="no" name="submissionField7" formControlName="submissionField7">
+            <label for="no">No</label>
         </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-            <label class="form-check-label" for="flexRadioDefault2">
-                Maybe
-            </label>
-        </div>
-    </div>
-    <div class="mb-3">
-        <label for="submissionControlInput4" class="form-label">Link (If this project is live somewhere)</label>
-        <input type="email" class="form-control" id="submissionControlInput4" placeholder="name@example.com">
-    </div>
-    <div class="mb-3">
-        <label for="submissionControlInput5" class="form-label">Github Link (If you have a code base you want to share)</label>
-        <input type="email" class="form-control" id="submissionControlInput5" placeholder="name@example.com">
-    </div>
-    <div class="mb-3">
-        <label for="submissionControlInput6" class="form-label">Anything else</label>
-        <input type="email" class="form-control" id="submissionControlInput6" placeholder="name@example.com">
-    </div>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#submissionModal">
-        Submit
-    </button>
-    <!-- Modal -->
-    <div class="modal fade" id="submissionModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Submission Status</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>We have successfully received your submission. Stay tuned for results. </p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
+        <div>
+            <input ngModel id="maybe" type="radio" value="maybe" name="submissionField7" formControlName="submissionField7">
+            <label for="maybe">Maybe</label>
         </div>
     </div>
-</div>
+    <input type = "submit" value = "Send" id="liveAlertBtn">
+</form>
+
