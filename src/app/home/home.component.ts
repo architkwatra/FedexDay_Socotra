@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { FormControl } from '@angular/forms';
 import {GlobalService} from "../global.service";
 
@@ -7,6 +7,7 @@ import {GlobalService} from "../global.service";
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
+
 export class HomeComponent implements OnInit {
 
   showModal = "none";
@@ -71,4 +72,5 @@ export class HomeComponent implements OnInit {
     this.projectDescription.setValue("");
     this.submitter.setValue("");
   }
+
 }
