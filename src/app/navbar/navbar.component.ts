@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  highlight: any;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.highlight = {'home': true, 'submissions': false, 'teams': false, 'timeline': false, 'gallery': false}
   }
 
+  select(cur: string) {
+    this.highlight = {'home': false, 'submissions': false, 'teams': false, 'timeline': false, 'gallery': false};
+    this.highlight[cur] = true;
+  }
 }
