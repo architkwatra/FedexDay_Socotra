@@ -12,6 +12,7 @@ import { AddProjectModalComponent } from './add-project-modal/add-project-modal.
 import { TeamsComponent } from './teams/teams.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import {ReactiveFormsModule} from "@angular/forms";
     BrowserModule,
     AppRoutingModule,
     AlertModule.forRoot(),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
