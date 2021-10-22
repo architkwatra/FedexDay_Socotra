@@ -1,4 +1,10 @@
-<app-teams-info [data]="this.globalService.currQuarterTeamsData"></app-teams-info>
+
+<div class="container-fluid main-container">
+    <div class="container-fluid main-heading">
+        <h3>Please add your Team and Project details</h3>
+    </div>
+    <app-teams-info [data]="this.globalService.currQuarterTeamsData"></app-teams-info>
+</div>
 
 <!-- Modal -->
 <div *ngIf="showModal" class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

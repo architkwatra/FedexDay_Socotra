@@ -14,7 +14,8 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {FormsModule} from "@angular/forms";
 import { AlertComponent } from './alert/alert.component';
 import { TeamsInfoComponent } from './teams-info/teams-info.component';
-
+import {SlickCarouselModule} from "ngx-slick-carousel";
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,14 +27,16 @@ import { TeamsInfoComponent } from './teams-info/teams-info.component';
     TeamsComponent,
     TimelineComponent,
     AlertComponent,
-    TeamsInfoComponent
+    TeamsInfoComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AlertModule.forRoot(),
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

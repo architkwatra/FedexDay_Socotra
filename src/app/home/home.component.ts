@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit} from '@angular/core';
 import { FormControl } from '@angular/forms';
 import {GlobalService} from "../global.service";
 
@@ -16,10 +16,51 @@ export class HomeComponent implements OnInit {
   submitter = new FormControl('');
   alertMessage = "";
   showAlert = false;
+  slides = [
+    {img: "assets/images/1.png"},
+    {img: "assets/images/8.jpg"},
+    {img: "assets/images/13.jpg"},
+    {img: "assets/images/12.jpg"},
+    {img: "assets/images/10.jpg"},
+    {img: "assets/images/9.jpg"},
+    {img: "assets/images/7.JPG"}
+  ];
+  slideConfig = {"slidesToShow": 2, "slidesToScroll": 1, autoplay: true, autoplaySpeed: 600,};
 
-  constructor(public globalService: GlobalService) { }
+  constructor(public globalService: GlobalService, private elementRef: ElementRef) { }
 
   ngOnInit(): void {
+    this.iniSlickJs();
+  }
+
+  private iniSlickJs() {
+    const htmlScriptElement = document.createElement('script');
+    htmlScriptElement.src = 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js';
+    this.elementRef.nativeElement.appendChild(htmlScriptElement);
+  }
+
+  addSlide() {
+    this.slides.push({img: "http://placehold.it/350x150/777777"})
+  }
+
+  removeSlide() {
+    this.slides.length = this.slides.length - 1;
+  }
+
+  slickInit(e:any) {
+    console.log('slick initialized');
+  }
+
+  breakpoint(e:any) {
+    console.log('breakpoint');
+  }
+
+  afterChange(e:any) {
+    console.log('afterChange');
+  }
+
+  beforeChange(e:any) {
+    console.log('beforeChange');
   }
 
   toggleModal(event: any) {
