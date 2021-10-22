@@ -8,11 +8,12 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SubmissionsComponent } from './submissions/submissions.component';
 import { QuarterItemComponent } from './quarter-item/quarter-item.component';
-import { AddProjectModalComponent } from './add-project-modal/add-project-modal.component';
 import { TeamsComponent } from './teams/teams.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {FormsModule} from "@angular/forms";
+import { AlertComponent } from './alert/alert.component';
+import { TeamsInfoComponent } from './teams-info/teams-info.component';
 
 
 @NgModule({
@@ -22,9 +23,10 @@ import {FormsModule} from "@angular/forms";
     NavbarComponent,
     SubmissionsComponent,
     QuarterItemComponent,
-    AddProjectModalComponent,
     TeamsComponent,
-    TimelineComponent
+    TimelineComponent,
+    AlertComponent,
+    TeamsInfoComponent
   ],
   imports: [
     BrowserModule,

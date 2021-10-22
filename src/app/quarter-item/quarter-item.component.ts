@@ -18,5 +18,4 @@ export class QuarterItemComponent implements OnInit {
   getId(prefix: string, i: number) {
     return prefix + i.toString();
   }
-
 }
