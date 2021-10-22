@@ -1,43 +1,51 @@
-<form #myform = "ngForm" (ngSubmit) = "onSubmit(myform)" >
-    <div class="form-group">
-        <label for="submissionField1">Name of Project</label>
-        <input ngModel name="submissionField1" type="text" class="form-control" id="submissionField1">
-    </div>
-    <div class="form-group">
-        <label for="submissionField2">Who worked on it?</label>
-        <input ngModel name="submissionField2" type="text" class="form-control" id="submissionField2">
-    </div>
-    <div class="form-group">
-        <label for="submissionField3">Describe your project</label>
-        <textarea ngModel name="submissionField3" id="submissionField3" cols="30" rows="10" class="form-control"></textarea>
-    </div>
-    <div class="form-group">
-        <label for="submissionField4">Link?</label>
-        <input ngModel name="submissionField4" type="text" class="form-control" id="submissionField4">
-    </div>
-    <div class="form-group">
-        <label for="submissionField5">GitHub?</label>
-        <input ngModel name="submissionField5" type="text" class="form-control" id="submissionField5">
-    </div>
-    <div class="form-group">
-        <label for="submissionField6">Anything else?</label>
-        <input ngModel name="submissionField6" type="text" class="form-control" id="submissionField6">
-    </div>
-    <div class="form-group">
-        <label for="submissionField7">Would you like to demo this?</label>
-        <div>
-            <input ngModel id="yes" type="radio" value="yes" name="submissionField7" formControlName="submissionField7" checked>
-            <label for="yes">Yes</label>
+<div class="p-5 text-center">
+    <h3 class="mb-3">Are ready to submit your project?</h3>
+    <form #myform = "ngForm" (ngSubmit) = "onSubmit(myform)" class="shadow p-3 mb-5 bg-body rounded">
+        <div class="form-group">
+            <label for="submissionField1">Name of Project</label>
+            <input ngModel name="submissionField1" type="text" class="form-control" id="submissionField1">
         </div>
-        <div>
-            <input ngModel id="no" type="radio" value="no" name="submissionField7" formControlName="submissionField7">
-            <label for="no">No</label>
+        <div class="form-group">
+            <label for="submissionField2">Who worked on it?</label>
+            <input ngModel name="submissionField2" type="text" class="form-control" id="submissionField2">
         </div>
-        <div>
-            <input ngModel id="maybe" type="radio" value="maybe" name="submissionField7" formControlName="submissionField7">
-            <label for="maybe">Maybe</label>
+        <div class="form-group">
+            <label for="submissionField3">Describe your project</label>
+            <textarea ngModel name="submissionField3" id="submissionField3" cols="30" rows="10" class="form-control"></textarea>
         </div>
-    </div>
-    <input type = "submit" value = "Send" id="liveAlertBtn">
-</form>
+        <div class="form-group">
+            <label for="submissionField4">Link?</label>
+            <input ngModel name="submissionField4" type="text" class="form-control" id="submissionField4">
+        </div>
+        <div class="form-group">
+            <label for="submissionField5">GitHub?</label>
+            <input ngModel name="submissionField5" type="text" class="form-control" id="submissionField5">
+        </div>
+        <div class="form-group">
+            <label for="submissionField6">Anything else?</label>
+            <input ngModel name="submissionField6" type="text" class="form-control" id="submissionField6">
+        </div>
+        <div class="form-group hstack gap-3">
+            <label for="submissionField7">Would you like to demo this?</label>
+            <div>
+                <input ngModel id="yes" type="radio" value="yes" name="submissionField7" checked>
+                <label for="yes">Yes</label>
+            </div>
+            <div>
+                <input ngModel id="no" type="radio" value="no" name="submissionField7">
+                <label for="no">No</label>
+            </div>
+            <div>
+                <input ngModel id="maybe" type="radio" value="maybe" name="submissionField7">
+                <label for="maybe">Maybe</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="formFile">Screenshot of your project</label>
+            <input ngModel name="formFile" class="form-control" type="file" id="formFile">
+        </div>
+        <input type = "submit" value = "Send" id="liveAlertBtn">
+    </form>
+</div>
+
 
