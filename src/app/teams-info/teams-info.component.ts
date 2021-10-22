@@ -13,4 +13,12 @@ export class TeamsInfoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getId(prefix: string, i: number) {
+    return prefix + i.toString();
+  }
+
+  openAccordian() {
+
+  }
+
 }
